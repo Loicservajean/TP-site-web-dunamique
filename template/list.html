@@ -1,0 +1,18 @@
+{{define "list"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des langages</title>
+</head>
+<body>
+    <h1>list langages de programmation</h1>
+    <ul>
+        {{range .}}
+            <li>{{.}}</li>
+        {{end}}
+    </ul>
+</body>
+</html>
+{{end}}
