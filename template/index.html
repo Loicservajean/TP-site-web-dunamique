@@ -10,25 +10,38 @@
 <body>
   <header class="header">
     <nav class="nav">
-      <!-- Liens gauche -->
       <div class="text-left">
         <a href="/add">Add</a>
         <a href="/">Home</a>
       </div>
-
-      <!-- Logo centré -->
       <div class="logo">
         <img src="/assets/img/logo/1.png" alt="Streaming Logo" />
       </div>
-
-      <!-- Liens droit (vide pour équilibrer) -->
       <div class="nav-right"></div>
     </nav>
   </header>
 
   <main>
     <h1>LES PRODUITS</h1>
-    <p>Welcome to the index page.</p>
+    <div class="product-grid">
+      {{range .}}
+      <div class="product-card">
+        <img src="{{.ImageUrl}}" alt="{{.Nom}}" />
+        <h2>{{.Nom}}</h2>
+
+        {{if ne .Reduction 0.0}}
+          <p>
+            <span style="text-decoration: line-through; color: gray;">{{.Prix}} €</span>
+            <span style="color: red; font-weight: bold; margin-left: 10px;">{{.Reduction}} €</span>
+          </p>
+        {{else}}
+          <p>{{.Prix}} €</p>
+        {{end}}
+
+        <a href="/article?id={{.ID}}" class="btn">Consulter</a>
+      </div>
+      {{end}}
+    </div>
   </main>
 </body>
 </html>
