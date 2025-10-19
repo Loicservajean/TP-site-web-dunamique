@@ -1,0 +1,51 @@
+{{define "article"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{.Nom}}</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="text-left">
+        <a href="/add">Add</a>
+        <a href="/">Home</a>
+      </div>
+      <div class="logo">
+        <img src="/assets/img/logo/1.png" alt="Streaming Logo" />
+      </div>
+      <div class="nav-right"></div>
+    </nav>
+  </header>
+  <main>
+    <div class="article-container">
+      <img src="{{.ImageUrl}}" alt="{{.Nom}}" class="article-image" />
+
+      <div class="article-details">
+        <h1>{{.Nom}}</h1>
+
+        {{if ne .Reduction 0.0}}
+          <p>
+            <span class="prix-original">{{.Prix}} €</span>
+            <span class="prix-reduit">{{.Reduction}} €</span>
+          </p>
+        {{else}}
+          <p>{{.Prix}} €</p>
+        {{end}}
+
+        <p>Tailles disponibles : XS | M</p>
+        <p>{{.Description}}</p>
+
+        <a href="#" class="btn-panier">Ajouter au panier</a>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:40px;">
+      <a href="/" class="btn">← Retour</a>
+    </div>
+  </main>
+</body>
+</html>
+{{end}}
