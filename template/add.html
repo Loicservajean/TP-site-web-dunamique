@@ -1,0 +1,46 @@
+{{define "add"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajouter un article</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <main class="form-container">
+    <h1>Ajouter un nouvel article</h1>
+
+    <form action="/add" method="POST">
+      <div class="form-group">
+        <label for="nom">Nom du produit :</label>
+        <input type="text" name="nom" id="nom" required>
+      </div>
+
+      <div class="form-group">
+        <label for="prix">Prix :</label>
+        <input type="text" name="prix" id="prix" required>
+      </div>
+
+      <div class="form-group">
+        <label for="reduction">🔻 Prix réduit (optionnel) :</label>
+        <input type="text" name="reduction" id="reduction">
+      </div>
+
+      <div class="form-group">
+        <label for="image">URL de l'image :</label>
+        <input type="text" name="image" id="image">
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description :</label>
+        <textarea name="description" id="description" rows="4"></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary">Ajouter</button>
+    </form>
+
+    <a href="/" class="btn-secondary">← Retour à l'accueil</a>
+  </main>
+</body>
+</html>
+{{end}}
