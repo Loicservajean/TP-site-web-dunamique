@@ -12,14 +12,14 @@ css/
 img/
     logo/
         1.png
-    products/
-        16A.webp
-        18A.webp
-        19A.webp
-        21A.webp
-        22A.webp
-        33B.webp 
-        34B.webp 
+products/
+    16A.webp
+    18A.webp
+    19A.webp
+    21A.webp
+    22A.webp
+    33B.webp 
+    34B.webp 
 ---
 
 
