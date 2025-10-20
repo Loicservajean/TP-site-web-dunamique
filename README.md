@@ -2,13 +2,13 @@
 ---
 
 ##  Structure du projet
-main.go              # Serveur Go avec struct et handler 
+main.go             
 templates/ 
     index.html 
     add.html
-    article.html      # Template HTML avec rendu conditionnel 
+    article.html    
 css/ 
-    style.css        # Styles minimalistes 
+    style.css    
 img/
     logo/
         1.png
